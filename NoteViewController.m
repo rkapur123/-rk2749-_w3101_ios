@@ -38,12 +38,6 @@
         }
         
         [self.imageList reloadData];
-
-        //[self.imageList reloadData];
-        /*NSData *data = [self.dataBase valueForKey:@"imageArray"];
-        NSArray* array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        images = [[NSMutableArray alloc] initWithArray:array];
-        [self.imageList reloadData]; */
     }
     
         
@@ -119,7 +113,32 @@
     [self.textView resignFirstResponder];
 }
 - (IBAction)colorButtonClicked:(id)sender {
-    
+    switch ([sender tag]) {
+        case 1:
+            //blue
+            [self.textView setTextColor:[UIColor blueColor]];
+            break;
+        case 2:
+            //purple
+            [self.textView setTextColor:[UIColor purpleColor]];
+            break;
+        case 3:
+            [self.textView setTextColor:[UIColor greenColor]];
+            break;
+        case 4:
+            [self.textView setTextColor:[UIColor redColor]];
+            break;
+        case 5:
+            [self.textView setTextColor:[UIColor orangeColor]];
+            break;
+            
+        default:
+            
+            break;
+            
+            
+            
+    }
     
     
     
@@ -150,7 +169,7 @@
                 [mail setSubject:messageTitle.text];
                 [mail setMessageBody:textView.text isHTML:NO];
                 if([images count] > 0) {
-                    NSData *data = UIImageJPEGRepresentation([images objectAtIndex:0],1);
+                    NSData *data = UIImageJPEGRepresentation([images objectAtIndex:[images count] -1],1);
                     [mail addAttachmentData:data  mimeType:@"image/jpeg" fileName:@"Photograph.jpg"];
                 }
                 
@@ -209,14 +228,16 @@
 
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
-    return [images count];
+    return 1;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     
     view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
-    ((UIImageView *)view).image = [images objectAtIndex:index];
-    view.contentMode = UIViewContentModeCenter;
+    if([images count] != 0) {
+        ((UIImageView *)view).image = [images objectAtIndex:[images count]-1];
+    }
+    view.contentMode = UIViewContentModeScaleAspectFill;
 
     return view;
     
@@ -225,9 +246,19 @@
 
 - (IBAction)onClickSave:(id)sender {
     
+    if ([self.messageTitle.text isEqualToString:@""] || [self.textView.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Problem"
+                                                        message:@"Either title or body is empty"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+
+    } else {
+    
     NSData *imageData = [[NSData alloc] init];
     if([images count] != 0) {
-        imageData = [NSData dataWithData:UIImagePNGRepresentation([images objectAtIndex:0])];
+        imageData = [NSData dataWithData:UIImagePNGRepresentation([images objectAtIndex:[images count]-1])];
     }
     
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
@@ -259,6 +290,8 @@
     }
     
     [[self navigationController] popViewControllerAnimated:YES];
+        
+    }
 
     
     

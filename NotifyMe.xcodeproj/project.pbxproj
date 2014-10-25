@@ -16,7 +16,6 @@
 		ED0F5DF719FABD0F0086B05D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0F5DF619FABD0F0086B05D /* MessageUI.framework */; };
 		ED29B7A219FACBDD00695363 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED29B7A019FACBDD00695363 /* CustomTableViewCell.m */; };
 		ED29B7A319FACBDD00695363 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED29B7A119FACBDD00695363 /* CustomTableViewCell.xib */; };
-		ED29B7A519FAD49100695363 /* plus-big.png in Resources */ = {isa = PBXBuildFile; fileRef = ED29B7A419FAD49100695363 /* plus-big.png */; };
 		EDB200CF19FA2574004F273C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB200CE19FA2574004F273C /* Foundation.framework */; };
 		EDB200D119FA2574004F273C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB200D019FA2574004F273C /* CoreGraphics.framework */; };
 		EDB200D319FA2574004F273C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB200D219FA2574004F273C /* UIKit.framework */; };
@@ -59,7 +58,6 @@
 		ED29B79F19FACBDD00695363 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		ED29B7A019FACBDD00695363 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		ED29B7A119FACBDD00695363 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
-		ED29B7A419FAD49100695363 /* plus-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus-big.png"; path = "../../../../Downloads/icons8_lightbox-6/50/plus-big.png"; sourceTree = "<group>"; };
 		EDB200CB19FA2574004F273C /* NotifyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotifyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB200CE19FA2574004F273C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EDB200D019FA2574004F273C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -207,7 +205,6 @@
 		EDB2011019FA2E25004F273C /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				ED29B7A419FAD49100695363 /* plus-big.png */,
 				ED0F5DF419FA34BC0086B05D /* bars.png */,
 				ED0F5DF219FA340C0086B05D /* plus.png */,
 				ED0F5DF019FA33F40086B05D /* mail.png */,
@@ -298,7 +295,6 @@
 				ED0F5DF519FA34BC0086B05D /* bars.png in Resources */,
 				EDB200DB19FA2575004F273C /* InfoPlist.strings in Resources */,
 				ED29B7A319FACBDD00695363 /* CustomTableViewCell.xib in Resources */,
-				ED29B7A519FAD49100695363 /* plus-big.png in Resources */,
 				ED0F5DEF19FA33D70086B05D /* bar.png in Resources */,
 				EDB200E619FA2577004F273C /* Images.xcassets in Resources */,
 				ED0F5DF319FA340C0086B05D /* plus.png in Resources */,
